@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <input.c>
 
 void calculateRoots(double a, double b, double c)
 {
@@ -30,18 +31,11 @@ void calculateRoots(double a, double b, double c)
 
 int main()
 {
-    double a, b, c;
 
     printf("Введите коэффициенты квадратного уравнения (a, b, c):\n");
-    printf("a = ");
-    if (scanf("%lf", &a) != 1)
-        return 1;
-    printf("b = ");
-    if (scanf("%lf", &b) != 1)
-        return 1;
-    printf("c = ");
-    if (scanf("%lf", &c) != 1)
-        return 1;
+    double a = get_double("a = ");
+    double b = get_double("b = ");
+    double c = get_double("c = ");
 
     if (a == 0)
     {
