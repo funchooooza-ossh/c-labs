@@ -9,6 +9,8 @@
                 "-Wall",
                 "-Wextra",
                 "-g3",
+                "-I",
+                "${workspaceFolder}/codeC",
                 "${file}",
                 "-o",
                 "${fileDirname}/output/${fileBasenameNoExtension}",
