@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <matrix.c>
+#include "matrix.c"
 
 int main()
 {

@@ -10,7 +10,7 @@
                 "-Wextra",
                 "-g3",
                 "-I",
-                "${workspaceFolder}/codeC",
+                "${workspaceFolder}/codeC/common",
                 "${file}",
                 "-o",
                 "${fileDirname}/output/${fileBasenameNoExtension}",

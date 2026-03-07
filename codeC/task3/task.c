@@ -1,6 +1,6 @@
 #include <string.h>
 #include <stdio.h>
-#include <input.c>
+#include "input.c"
 #include <ctype.h>
 
 char *to_upper_specific(const char *input, const char *targets)

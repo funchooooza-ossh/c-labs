@@ -1,6 +1,6 @@
 #include <input.c>
 #include <stdio.h>
-#include <output.c>
+#include "output.c"
 
 void print_double(int r, int c, double *m)
 // func to printf pretty double matrix

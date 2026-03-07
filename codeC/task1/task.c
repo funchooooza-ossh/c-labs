@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include <input.c>
+#include "input.c"
 
 void calculateRoots(double a, double b, double c)
 {

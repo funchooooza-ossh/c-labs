@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <output.c>
+#include "output.c"
 #include <limits.h>
 #include <math.h>
 #include <string.h>
@@ -121,6 +121,21 @@ double get_double(const char *prompt)
 
         printTypeError(&value);
         clearBuffer();
+    }
+}
+
+// positive double input checker
+double get_positive_double(const char *prompt)
+{
+    double value;
+    while (1)
+    {
+        value = get_double(prompt);
+        if (value > 0)
+        {
+            return value; // Возвращаем только если число положительное
+        }
+        printf("Ошибка: %.2lf <= 0. Число должно быть положительным.\n", value);
     }
 }
 
