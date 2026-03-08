@@ -1,3 +1,6 @@
+#ifndef INPUT_C
+#define INPUT_C
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "output.c"
@@ -182,3 +185,21 @@ int get_int(const char *prompt)
         clearBuffer();
     }
 }
+
+int get_positive_int(const char *prompt)
+{
+    while (1)
+    {
+        int value = get_int(prompt);
+        if (value > 0)
+        {
+            return value;
+        }
+        else
+        {
+            printf("Ошибка: %d <= 0. Число должно быть положительным.\n", value);
+        }
+    }
+}
+
+#endif

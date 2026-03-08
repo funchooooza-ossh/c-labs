@@ -1,3 +1,6 @@
+#ifndef TRIANGLE_C
+#define TRIANGLE_C
+
 #include <stdio.h>
 #include <math.h>
 
@@ -18,3 +21,4 @@ double calc_triangle_area(double p, double a, double b, double c)
     double half_p = p / 2.0;
     return sqrt(half_p * (half_p - a) * (half_p - b) * (half_p - c));
 }
+#endif
