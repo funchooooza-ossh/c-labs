@@ -24,13 +24,20 @@ int count_lines(const char *filename)
     FILE *f = open_file(filename, "r");
     if (!f)
         return 0;
+
     int lines = 0;
     char ch;
+    char last_ch = '\n';
+
     while ((ch = fgetc(f)) != EOF)
     {
         if (ch == '\n')
             lines++;
+        last_ch = ch;
     }
+
+    if (last_ch != '\n')
+        lines++;
 
     fclose(f);
     return lines;
